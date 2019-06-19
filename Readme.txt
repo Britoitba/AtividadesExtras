@@ -1,4 +1,4 @@
-Utilizado XAAMP para acesso ao banco de dados. 
+Utilizado XAMPP para acesso ao banco de dados. 
 Nome: atividadesextras
 utf8_general_ci
 Necessário plugins JavaFX
