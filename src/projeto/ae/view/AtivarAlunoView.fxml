@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto.ae.controller.AtivarAlunoController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" prefWidth="200.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="600.0" prefWidth="800.0" GridPane.columnIndex="1">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="794.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/branco.jpg" />
+               </image></ImageView>
+            <Button fx:id="btnAtualizar" layoutX="6.0" layoutY="448.0" mnemonicParsing="false" onAction="#atualizar" prefHeight="32.0" prefWidth="794.0" text="Atualizar" />
+            <TableView fx:id="tblAlunos" layoutX="6.0" layoutY="121.0" prefHeight="325.0" prefWidth="794.0">
+              <columns>
+                  <TableColumn fx:id="tcId" prefWidth="38.0" text="ID" />
+                <TableColumn fx:id="tcAluno" prefWidth="343.0" text="Aluno" />
+                <TableColumn fx:id="tcRa" minWidth="0.0" prefWidth="189.0" text="RA" />
+                  <TableColumn fx:id="tcCurso" prefWidth="304.0" text="Curso" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnCancelar" layoutX="23.0" layoutY="531.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="41.0" prefWidth="147.0" text="Voltar">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font></Button>
+            <Button fx:id="btnRecusar" layoutX="327.0" layoutY="531.0" mnemonicParsing="false" onAction="#recusar" prefHeight="41.0" prefWidth="147.0" text="Recusar">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font></Button>
+            <Button fx:id="btnAtivar" layoutX="623.0" layoutY="531.0" mnemonicParsing="false" onAction="#ativar" prefHeight="41.0" prefWidth="147.0" text="Ativar">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font></Button>
+            <Label alignment="CENTER" layoutX="3.0" prefHeight="65.0" prefWidth="800.0" text="Ativar Aluno">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</GridPane>

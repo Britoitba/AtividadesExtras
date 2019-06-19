@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto.ae.controller.RecursoController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" prefWidth="200.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="800.0" prefWidth="800.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Pane fx:id="paneNotificacoes" prefHeight="600.0" prefWidth="800.0" GridPane.columnIndex="1">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="794.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/branco.jpg" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tblRequisicoes" layoutY="65.0" prefHeight="410.0" prefWidth="800.0">
+               <columns>
+                  <TableColumn fx:id="tcId" prefWidth="44.0" text="ID" />
+                  <TableColumn fx:id="tcAluno" prefWidth="285.0" text="Aluno" />
+                  <TableColumn fx:id="tcAtividade" prefWidth="234.0" text="Atividade" />
+                  <TableColumn fx:id="tcCurso" prefWidth="236.0" text="Curso" />
+               </columns>
+            </TableView>
+            <Button fx:id="btnDetalhar" layoutX="673.0" layoutY="548.0" mnemonicParsing="false" onAction="#detalhar" prefHeight="38.0" prefWidth="107.0" text="Detalhar">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font></Button>
+            <Button fx:id="btnVoltar" layoutX="20.0" layoutY="548.0" mnemonicParsing="false" onAction="#voltar" prefHeight="38.0" prefWidth="107.0" text="Voltar">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font></Button>
+            <Label alignment="CENTER" prefHeight="65.0" prefWidth="800.0" text="Recursos">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAtualizar" layoutY="477.0" mnemonicParsing="false" onAction="#atualizar" prefHeight="32.0" prefWidth="794.0" text="Atualizar" />
+            <Pane fx:id="pane" prefHeight="600.0" prefWidth="800.0">
+               <children>
+                  <ImageView fitHeight="596.0" fitWidth="800.0" layoutX="-2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/branco.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblCurso" layoutX="36.0" layoutY="80.0" text="Curso:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblNome" layoutX="33.0" layoutY="32.0" text="Aluno:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblAtividade" layoutX="7.0" layoutY="131.0" text="Atividade: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblRelatorioAluno" layoutX="20.0" layoutY="178.0" text="Relatório da atividade">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblHoras" layoutX="559.0" layoutY="131.0" prefHeight="27.0" prefWidth="129.0" text="Horas Solicitadas: ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblJustificativa" layoutX="20.0" layoutY="367.0" text="Justificativa do recurso">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblHorasValidadas" layoutX="288.0" layoutY="519.0" prefHeight="27.0" prefWidth="123.0" text="Horas Validadas: ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtAluno" alignment="CENTER" layoutX="89.0" layoutY="31.0" prefHeight="31.0" prefWidth="466.0" promptText="Francisco Felipe Brito do Nascimento">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtCurso" alignment="CENTER" layoutX="89.0" layoutY="79.0" prefHeight="31.0" prefWidth="466.0" promptText="Analise e Desenvolvimento de Sistemas">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtAtividade" alignment="CENTER" layoutX="89.0" layoutY="129.0" prefHeight="31.0" prefWidth="466.0" promptText="Participação em visitas técnicas ">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtHoras" alignment="CENTER" layoutX="689.0" layoutY="130.0" prefHeight="31.0" prefWidth="91.0" promptText="50">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextArea fx:id="txtRelatorio" layoutX="19.0" layoutY="204.0" prefHeight="153.0" prefWidth="763.0" promptText="Relatorio do Aluno">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                  </TextArea>
+                  <TextField fx:id="txtHorasValidadas" alignment="CENTER" layoutX="411.0" layoutY="518.0" prefHeight="25.0" prefWidth="91.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextArea fx:id="txtJustificativa" layoutX="19.0" layoutY="392.0" prefHeight="103.0" prefWidth="763.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextArea>
+                  <Button fx:id="btnAceitar" layoutX="672.0" layoutY="548.0" mnemonicParsing="false" onAction="#aceitar" prefHeight="38.0" prefWidth="108.0" text="Aceitar">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCancelar1" layoutX="20.0" layoutY="548.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="38.0" prefWidth="108.0" text="Cancelar">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutX="1.0" layoutY="364.0" prefHeight="6.0" prefWidth="800.0" />
+                  <Separator layoutX="-2.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="603.0" />
+                  <Button fx:id="btnArquivo1" layoutX="685.0" layoutY="30.0" mnemonicParsing="false" onAction="#baixar" prefHeight="32.0" prefWidth="99.0" text="Download" />
+                  <Label layoutX="681.0" layoutY="66.0" text="Baixar Certificado">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</GridPane>

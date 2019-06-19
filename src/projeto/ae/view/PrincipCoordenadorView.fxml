@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto.ae.controller.PrincipCoordenadorController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" prefWidth="200.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="800.0" prefWidth="800.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="btnCadastrarCoord" layoutX="6.0" layoutY="14.0" mnemonicParsing="false" onAction="#cadastrarCoord" prefHeight="58.0" prefWidth="188.0" text="Cadastrar Coordenador">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnCadastrarProf" layoutX="6.0" layoutY="83.0" mnemonicParsing="false" onAction="#cadastrarProf" prefHeight="58.0" prefWidth="188.0" text="Cadastrar Professor">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnRequisicoes" layoutX="6.0" layoutY="154.0" mnemonicParsing="false" onAction="#verificarReq" prefHeight="58.0" prefWidth="188.0" text="Verificar Requisições">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnVerificaRecurso" layoutX="6.0" layoutY="225.0" mnemonicParsing="false" onAction="#verificarRecursos" prefHeight="58.0" prefWidth="188.0" text="Verificar Recursos">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnAtivar" layoutX="6.0" layoutY="296.0" mnemonicParsing="false" onAction="#AtivarAluno" prefHeight="58.0" prefWidth="188.0" text="Ativar Usuario">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <Button fx:id="btnGerarRelatorio" layoutX="6.0" layoutY="367.0" mnemonicParsing="false" onAction="#relatorio" prefHeight="58.0" prefWidth="188.0" text="Gerar Relatório">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnSair" layoutX="6.0" layoutY="536.0" mnemonicParsing="false" onAction="#sair" prefHeight="58.0" prefWidth="188.0" text="Sair">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font></Button>
+         </children>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+         <children>
+            <ImageView fitHeight="124.0" fitWidth="449.0" layoutX="14.0" layoutY="462.0" opacity="0.62" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/if2.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="-5.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="13.0" />
+            <Label fx:id="lblSetNome" alignment="CENTER" layoutX="8.0" layoutY="90.0" prefHeight="54.0" prefWidth="785.0" text="Label">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="268.0" layoutY="14.0" text="BEM VINDO">
+               <font>
+                  <Font name="Arial" size="47.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</GridPane>

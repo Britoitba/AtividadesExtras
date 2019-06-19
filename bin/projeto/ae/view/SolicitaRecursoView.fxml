@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto.ae.controller.SolicitaRecursoController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" prefWidth="200.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Pane fx:id="paneRecurso" prefHeight="600.0" prefWidth="800.0" GridPane.columnIndex="1">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="794.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/branco.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblRecurso" alignment="CENTER" prefHeight="65.0" prefWidth="800.0" text="Solicitação de Recurso">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblJustificativaRecurso" layoutX="22.0" layoutY="87.0" text="Justificativa da solicitação de recurso">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtRecurso" layoutX="22.0" layoutY="114.0" prefHeight="413.0" prefWidth="749.0" text="Justificativa do Aluno">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="btnEnviar" layoutX="680.0" layoutY="548.0" mnemonicParsing="false" onAction="#enviar" prefHeight="38.0" prefWidth="97.0" text="Enviar">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font></Button>
+            <Button fx:id="btnCancear" layoutX="15.0" layoutY="548.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="38.0" prefWidth="97.0" text="Cancelar">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font></Button>
+         </children>
+      </Pane>
+   </children>
+</GridPane>

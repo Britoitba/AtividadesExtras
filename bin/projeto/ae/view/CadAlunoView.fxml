@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="600.0" maxWidth="1000.0" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto.ae.controller.CadAlunoController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <Label fx:id="lblError" layoutX="281.0" layoutY="472.0" prefHeight="39.0" prefWidth="229.0" text="Verifique os Campos com X" textFill="RED">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblRA" layoutX="483.0" layoutY="208.0" prefHeight="39.0" prefWidth="18.0" text="X" textFill="RED">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="121.0" layoutY="127.0" text="Nome completo:">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font></Label>
+            <Label layoutX="208.0" layoutY="172.0" text="Curso:">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font></Label>
+            <Label layoutX="232.0" layoutY="215.0" text="RA:">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font></Label>
+            <Label layoutX="186.0" layoutY="258.0" text="Campus:">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font></Label>
+            <Label layoutX="210.0" layoutY="305.0" text="Email:">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font></Label>
+            <Label layoutX="203.0" layoutY="348.0" text="Senha:">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font></Label>
+            <Label alignment="CENTER" prefHeight="65.0" prefWidth="1000.0" text="Cadastrar aluno">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblEmail" layoutX="725.0" layoutY="303.0" prefHeight="39.0" prefWidth="18.0" text="X" textFill="RED">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCurso" layoutX="724.0" layoutY="165.0" prefHeight="39.0" prefWidth="18.0" text="X" textFill="RED">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNome" layoutX="276.0" layoutY="123.0" onAction="#onEnter" prefHeight="25.0" prefWidth="439.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <ComboBox fx:id="cbCurso" layoutX="276.0" layoutY="169.0" prefHeight="30.0" prefWidth="439.0" promptText="Os cursos serão listados aqui" />
+            <TextField fx:id="txtRa" layoutX="276.0" layoutY="212.0" onAction="#onEnter" prefHeight="25.0" prefWidth="198.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField fx:id="txtCampus" layoutX="276.0" layoutY="257.0" onAction="#onEnter" prefHeight="25.0" prefWidth="439.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField fx:id="txtEmail" layoutX="276.0" layoutY="302.0" onAction="#onEnter" prefHeight="25.0" prefWidth="439.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <PasswordField fx:id="pwdSenha" layoutX="276.0" layoutY="347.0" onAction="#onEnter" prefHeight="25.0" prefWidth="198.0">
+               <font>
+                  <Font size="15.0" />
+               </font></PasswordField>
+            <Button fx:id="btnCadastrar" layoutX="802.0" layoutY="547.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="39.0" prefWidth="173.0" text="Solicitar cadastro">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font></Button>
+            <Button fx:id="btnCancelar" layoutX="26.0" layoutY="547.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="39.0" prefWidth="134.0" text="Cancelar">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font></Button>
+         </children>
+      </Pane>
+   </children>
+</GridPane>
